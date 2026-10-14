@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>윤지은 | 자기소개</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --bg-a: #cfeafc;
+  --bg-b: #e4dcfb;
+  --bg-c: #f3e8ff;
+  --ink: #1e1b4b;
+  --ink-soft: #5b5a7a;
+  --screen: #f7f6fd;
+  --surface: #ffffff;
+  --line: #e7e3f6;
+  --sky: #0ea5e9;
+  --violet: #7c3aed;
+  --bezel: #1c1a2e;
+  --wall-a: #bfe3fb;
+  --wall-b: #d9cffb;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-a: #0f172a; --bg-b: #1e1b4b; --bg-c: #2e1065;
+    --ink: #eeeaff; --ink-soft: #a9a5c8;
+    --screen: #12112a; --surface: #1d1b3a; --line: #2d2a52;
+    --sky: #7dd3fc; --violet: #c4b5fd; --bezel: #050510;
+    --wall-a: #1e3a5f; --wall-b: #3b2a78;
+  }
+}
+:root[data-theme="dark"] {
+  --bg-a: #0f172a; --bg-b: #1e1b4b; --bg-c: #2e1065;
+  --ink: #eeeaff; --ink-soft: #a9a5c8;
+  --screen: #12112a; --surface: #1d1b3a; --line: #2d2a52;
+  --sky: #7dd3fc; --violet: #c4b5fd; --bezel: #050510;
+  --wall-a: #1e3a5f; --wall-b: #3b2a78;
+}
+*, *::before, *::after { box-sizing: inherit; margin: 0; padding: 0; }
+html { height: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); }
+body {
+  min-height: 100%;
+  font-family: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--bg-a) 0%, var(--bg-b) 55%, var(--bg-c) 100%) fixed;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 18px; padding: 32px 16px;
+  transition: background .4s;
+}
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; border-radius: 14px; }
+
+/* phone frame */
+.phone {
+  position: relative; width: 390px; height: 800px; max-width: 100%;
+  border-radius: 54px; padding: 12px; background: var(--bezel);
+  box-shadow: 0 0 0 2px #3a3656, 0 40px 80px -20px rgba(76, 29, 149, .45);
+}
+.screen {
+  position: relative; width: 100%; height: 100%; border-radius: 42px; overflow: hidden;
+  background: var(--screen);
+}
+.island {
+  position: absolute; top: 11px; left: 50%; transform: translateX(-50%);
+  width: 110px; height: 32px; border-radius: 20px; background: #000; z-index: 30;
+}
+.status {
+  position: absolute; top: 0; left: 0; right: 0; height: 52px; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 32px 0; font-size: 15px; font-weight: 600;
+}
+.status-icons { display: flex; gap: 6px; align-items: center; }
+.status-icons svg { width: 18px; height: 12px; fill: currentColor; }
+
+/* home */
+.home {
+  position: absolute; inset: 0; padding: 64px 22px 30px;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255,255,255,.55), transparent 45%),
+    linear-gradient(160deg, var(--wall-a) 0%, var(--wall-b) 100%);
+  display: flex; flex-direction: column;
+}
+.widget {
+  background: rgba(255,255,255,.55); border: 1px solid rgba(255,255,255,.7);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-radius: 26px; padding: 20px; display: flex; gap: 16px; align-items: center;
+}
+:root[data-theme="dark"] .widget { background: rgba(20,18,50,.5); border-color: rgba(255,255,255,.1); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .widget { background: rgba(20,18,50,.5); border-color: rgba(255,255,255,.1); } }
+.avatar {
+  width: 68px; height: 68px; flex: none; border-radius: 50%;
+  background: linear-gradient(135deg, #7dd3fc, #a78bfa);
+  display: grid; place-items: center; color: #fff;
+  font-family: "Gowun Batang", serif; font-size: 28px;
+  box-shadow: 0 0 0 3px rgba(255,255,255,.8);
+  overflow: hidden;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.widget h1 { font-family: "Gowun Batang", serif; font-size: 26px; line-height: 1.2; }
+.widget p { font-size: 13.5px; color: var(--ink-soft); margin-top: 4px; line-height: 1.5; }
+
+.grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px 10px; margin-top: 28px;
+}
+.app { display: flex; flex-direction: column; align-items: center; gap: 7px; }
+.icon {
+  width: 60px; height: 60px; border-radius: 17px; display: grid; place-items: center;
+  font-size: 28px; box-shadow: 0 6px 14px -6px rgba(49, 46, 129, .45);
+  transition: transform .15s;
+}
+.app:active .icon { transform: scale(.9); }
+.app span { font-size: 12px; font-weight: 500; }
+.g1 { background: linear-gradient(145deg, #e0f2fe, #bae6fd); }
+.g2 { background: linear-gradient(145deg, #ede9fe, #c4b5fd); }
+.g3 { background: linear-gradient(145deg, #dbeafe, #a5b4fc); }
+.g4 { background: linear-gradient(145deg, #f5f3ff, #ddd6fe); }
+.g5 { background: linear-gradient(145deg, #cffafe, #a5f3fc); }
+.g6 { background: linear-gradient(145deg, #fae8ff, #e9d5ff); }
+.g7 { background: linear-gradient(145deg, #e0e7ff, #c7d2fe); }
+.g8 { background: linear-gradient(145deg, #312e81, #1e1b4b); }
+
+.dock {
+  margin-top: auto; background: rgba(255,255,255,.4); border-radius: 30px; padding: 12px 18px;
+  display: flex; justify-content: space-around;
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+:root[data-theme="dark"] .dock { background: rgba(20,18,50,.45); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .dock { background: rgba(20,18,50,.45); } }
+.dock .app span { display: none; }
+
+/* app screens */
+.page {
+  position: absolute; inset: 0; background: var(--screen); z-index: 10;
+  padding: 58px 0 40px; overflow-y: auto;
+  transform: scale(.85); opacity: 0; pointer-events: none;
+  transition: transform .32s cubic-bezier(.2,.8,.2,1), opacity .25s;
+}
+.page.open { transform: scale(1); opacity: 1; pointer-events: auto; }
+.page-head { padding: 4px 18px 10px; position: sticky; top: 0; background: var(--screen); z-index: 2; }
+.back { color: var(--violet); font-size: 16px; font-weight: 500; padding: 6px 2px; }
+.page h2 { font-size: 30px; font-weight: 700; margin-top: 4px; letter-spacing: -.5px; }
+.group {
+  margin: 14px 16px 0; background: var(--surface); border-radius: 16px; overflow: hidden;
+  border: 1px solid var(--line);
+}
+.group-title { margin: 22px 30px 0; font-size: 13px; color: var(--ink-soft); }
+.row { padding: 14px 16px; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.55; }
+.row:last-child { border-bottom: 0; }
+.row b { display: block; font-weight: 600; }
+.row small { display: block; color: var(--ink-soft); font-size: 13px; margin-top: 2px; }
+.row a { color: var(--violet); text-decoration: none; }
+.bubble {
+  max-width: 82%; padding: 11px 15px; border-radius: 20px; font-size: 15px; line-height: 1.55;
+  margin: 8px 16px; background: var(--surface); border: 1px solid var(--line);
+}
+.bubble.me {
+  margin-left: auto; color: #fff; border: 0;
+  background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+}
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 16px; }
+.chip {
+  padding: 7px 13px; border-radius: 999px; font-size: 14px; font-weight: 500;
+  background: linear-gradient(135deg, rgba(56,189,248,.16), rgba(139,92,246,.18));
+  border: 1px solid var(--line);
+}
+.toggle-row { display: flex; justify-content: space-between; align-items: center; }
+.switch {
+  width: 51px; height: 31px; border-radius: 16px; background: var(--line); position: relative;
+  transition: background .2s;
+}
+.switch::after {
+  content: ""; position: absolute; top: 2px; left: 2px; width: 27px; height: 27px;
+  border-radius: 50%; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,.2); transition: transform .2s;
+}
+.switch[aria-checked="true"] { background: linear-gradient(135deg, #38bdf8, #8b5cf6); }
+.switch[aria-checked="true"]::after { transform: translateX(20px); }
+
+.home-bar {
+  position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
+  width: 134px; height: 5px; border-radius: 3px; background: var(--ink); opacity: .75; z-index: 25;
+}
+.hint { font-size: 14px; color: var(--ink-soft); }
+
+@media (max-width: 480px) {
+  body { padding: 0; gap: 0; }
+  .phone { width: 100%; height: 100vh; height: 100dvh; border-radius: 0; padding: 0; box-shadow: none; background: none; }
+  .screen { border-radius: 0; }
+  .island, .hint { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page, .icon, .switch, .switch::after { transition: none; }
+}
+
+/* pixel hand cursor */
+button, a, [data-open], .qchip { cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDE4IDE4IiBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPjxyZWN0IHg9IjYiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI3IiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iNSIgeT0iMSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjYiIHk9IjEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI3IiB5PSIxIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iOCIgeT0iMSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjUiIHk9IjIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI2IiB5PSIyIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iNyIgeT0iMiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjgiIHk9IjIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI1IiB5PSIzIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iNiIgeT0iMyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjciIHk9IjMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI4IiB5PSIzIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iNSIgeT0iNCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjYiIHk9IjQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI3IiB5PSI0IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iOCIgeT0iNCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjkiIHk9IjQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIxMCIgeT0iNCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjUiIHk9IjUiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI2IiB5PSI1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iNyIgeT0iNSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjgiIHk9IjUiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI5IiB5PSI1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTAiIHk9IjUiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMSIgeT0iNSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjEyIiB5PSI1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iMTMiIHk9IjUiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI1IiB5PSI2IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iNiIgeT0iNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjciIHk9IjYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI4IiB5PSI2IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iOSIgeT0iNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjEwIiB5PSI2IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTEiIHk9IjYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIxMiIgeT0iNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjEzIiB5PSI2IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTQiIHk9IjYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIxNSIgeT0iNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjIiIHk9IjciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIzIiB5PSI3IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iNSIgeT0iNyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjYiIHk9IjciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI3IiB5PSI3IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iOCIgeT0iNyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjkiIHk9IjciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMCIgeT0iNyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjExIiB5PSI3IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iMTIiIHk9IjciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMyIgeT0iNyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjE0IiB5PSI3IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iMTUiIHk9IjciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxNiIgeT0iNyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjEiIHk9IjgiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIyIiB5PSI4IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMyIgeT0iOCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjQiIHk9IjgiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI1IiB5PSI4IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iNiIgeT0iOCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjciIHk9IjgiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iOSIgeT0iOCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjEwIiB5PSI4IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTEiIHk9IjgiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMiIgeT0iOCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjEzIiB5PSI4IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTQiIHk9IjgiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIxNSIgeT0iOCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjE2IiB5PSI4IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjYjliOWM2Ii8+PHJlY3QgeD0iMTciIHk9IjgiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIxIiB5PSI5IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iMiIgeT0iOSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjMiIHk9IjkiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI0IiB5PSI5IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iNSIgeT0iOSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjYiIHk9IjkiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI3IiB5PSI5IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iOCIgeT0iOSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjkiIHk9IjkiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMCIgeT0iOSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjExIiB5PSI5IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTIiIHk9IjkiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMyIgeT0iOSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjE0IiB5PSI5IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTUiIHk9IjkiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxNiIgeT0iOSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2I5YjljNiIvPjxyZWN0IHg9IjE3IiB5PSI5IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iMiIgeT0iMTAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIzIiB5PSIxMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjQiIHk9IjEwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iNSIgeT0iMTAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI2IiB5PSIxMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjciIHk9IjEwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iOCIgeT0iMTAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI5IiB5PSIxMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjEwIiB5PSIxMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjExIiB5PSIxMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjEyIiB5PSIxMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjEzIiB5PSIxMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjE0IiB5PSIxMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjE1IiB5PSIxMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjE2IiB5PSIxMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2I5YjljNiIvPjxyZWN0IHg9IjE3IiB5PSIxMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjMiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iNCIgeT0iMTEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI1IiB5PSIxMSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjYiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iNyIgeT0iMTEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI4IiB5PSIxMSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjkiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTAiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTEiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTIiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTMiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTQiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTUiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTYiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjYjliOWM2Ii8+PHJlY3QgeD0iMTciIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iMyIgeT0iMTIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI0IiB5PSIxMiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjUiIHk9IjEyIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iNiIgeT0iMTIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI3IiB5PSIxMiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjgiIHk9IjEyIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iOSIgeT0iMTIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMCIgeT0iMTIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMSIgeT0iMTIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMiIgeT0iMTIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMyIgeT0iMTIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxNCIgeT0iMTIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxNSIgeT0iMTIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNiOWI5YzYiLz48cmVjdCB4PSIxNiIgeT0iMTIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNiOWI5YzYiLz48cmVjdCB4PSIxNyIgeT0iMTIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI0IiB5PSIxMyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjUiIHk9IjEzIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iNiIgeT0iMTMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI3IiB5PSIxMyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjgiIHk9IjEzIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iOSIgeT0iMTMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMCIgeT0iMTMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMSIgeT0iMTMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMiIgeT0iMTMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMyIgeT0iMTMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxNCIgeT0iMTMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxNSIgeT0iMTMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNiOWI5YzYiLz48cmVjdCB4PSIxNiIgeT0iMTMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI0IiB5PSIxNCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjUiIHk9IjE0IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iNiIgeT0iMTQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI3IiB5PSIxNCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjgiIHk9IjE0IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iOSIgeT0iMTQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMCIgeT0iMTQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMSIgeT0iMTQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMiIgeT0iMTQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxMyIgeT0iMTQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxNCIgeT0iMTQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNiOWI5YzYiLz48cmVjdCB4PSIxNSIgeT0iMTQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNiOWI5YzYiLz48cmVjdCB4PSIxNiIgeT0iMTQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI1IiB5PSIxNSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjYiIHk9IjE1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iNyIgeT0iMTUiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI4IiB5PSIxNSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjkiIHk9IjE1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTAiIHk9IjE1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTEiIHk9IjE1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTIiIHk9IjE1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTMiIHk9IjE1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMTQiIHk9IjE1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjYjliOWM2Ii8+PHJlY3QgeD0iMTUiIHk9IjE1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iNSIgeT0iMTYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI2IiB5PSIxNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjciIHk9IjE2IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iOCIgeT0iMTYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSI5IiB5PSIxNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjEwIiB5PSIxNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjExIiB5PSIxNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjEyIiB5PSIxNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjEzIiB5PSIxNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjE0IiB5PSIxNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2I5YjljNiIvPjxyZWN0IHg9IjE1IiB5PSIxNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjUiIHk9IjE3IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iNiIgeT0iMTciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSI3IiB5PSIxNyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzExMSIvPjxyZWN0IHg9IjgiIHk9IjE3IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTExIi8+PHJlY3QgeD0iOSIgeT0iMTciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIxMCIgeT0iMTciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIxMSIgeT0iMTciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIxMiIgeT0iMTciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIxMyIgeT0iMTciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIxNCIgeT0iMTciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48cmVjdCB4PSIxNSIgeT0iMTciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxMTEiLz48L3N2Zz4=") 11 1, pointer; }
+
+/* chat app */
+.page.chat { display: flex; flex-direction: column; overflow: hidden; padding-bottom: 26px; }
+.chat-head { display: flex; align-items: center; gap: 10px; padding: 2px 14px 10px; border-bottom: 1px solid var(--line); }
+.chat-head .back { margin-right: 2px; }
+.mini-av { width: 38px; height: 38px; border-radius: 50%; flex: none; display: grid; place-items: center;
+  background: linear-gradient(135deg, #7dd3fc, #a78bfa); color: #fff; font-family: "Gowun Batang", serif; font-size: 17px; }
+.chat-head b { display: block; font-size: 16px; }
+.chat-head small { display: block; font-size: 12px; color: var(--ink-soft); }
+.chat-head small::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #22c55e; margin-right: 5px; }
+.msgs { flex: 1; overflow-y: auto; padding: 12px 0 8px; scroll-behavior: smooth; }
+.msgs .bubble { animation: pop .28s ease-out both; }
+@keyframes pop { from { opacity: 0; transform: translateY(8px) scale(.97); } to { opacity: 1; transform: none; } }
+.day { text-align: center; font-size: 11.5px; color: var(--ink-soft); margin: 4px 0 6px; }
+.typing { display: inline-flex; gap: 4px; padding: 14px 16px; }
+.typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--ink-soft); opacity: .4; animation: blink 1s infinite; }
+.typing i:nth-child(2) { animation-delay: .15s; } .typing i:nth-child(3) { animation-delay: .3s; }
+@keyframes blink { 50% { opacity: 1; transform: translateY(-2px); } }
+.qbar { border-top: 1px solid var(--line); padding: 10px 12px 4px; background: var(--screen); }
+.qbar p { font-size: 12px; color: var(--ink-soft); margin: 0 4px 8px; }
+.qlist { display: flex; flex-wrap: wrap; gap: 7px; max-height: 128px; overflow-y: auto; padding-bottom: 6px; }
+.qchip { padding: 8px 12px; border-radius: 999px; font-size: 13px; font-weight: 500; text-align: left;
+  background: var(--surface); border: 1px solid var(--line); color: var(--violet); transition: transform .12s, opacity .2s; }
+.qchip:hover { border-color: var(--violet); }
+.qchip:active { transform: scale(.95); }
+.qchip.used { opacity: .45; }
+.qchip:disabled { pointer-events: none; }
+.row small { line-height: 1.55; }
+@media (prefers-reduced-motion: reduce) { .msgs .bubble, .typing i { animation: none; } .msgs { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<!--
+  ✏️ 내용 수정 방법
+  아래 <script type="text/markdown"> 안의 마크다운만 고치면 홈페이지가 자동으로 바뀌어요.
+  #  이름            (다음 줄은 한 줄 소개)
+  ## 이모지 앱이름   → 홈 화면의 앱 아이콘 하나
+  ### 소제목          → 앱 안의 묶음 제목
+  - **제목** 설명     → 목록 한 줄
+  `태그` `태그`      → 태그
+  [글자](주소)       → 링크
+  대화형 앱(소개):
+  > 문장             → 처음에 보이는 인사 말풍선
+  Q. 질문            → 누를 수 있는 질문 버튼
+  A. 대답            → 그 질문의 대답 말풍선 (여러 줄 가능)
+-->
+<script type="text/markdown" id="content">
+# 윤지은
+밝고, 적극적인 대학생입니다
+
+## 👋 소개
+> 안녕하세요! 경영학을 공부하는 윤지은입니다 😊
+> 궁금한 질문을 아래에서 눌러주세요. 바로 대답해 드릴게요!
+
+Q. 간단하게 자기소개 부탁드려요
+A. 안녕하세요, 가천대학교 경영학전공 3학년 윤지은입니다.
+A. 뷰티 인스타그램 운영과 브랜드 서포터즈 활동으로 소비자가 왜 사는지를 직접 경험해 왔고, 지금은 롯데홈쇼핑 대학대전에서 MD로 상품을 기획하고 있어요.
+A. 한마디로, 소비자의 마음을 읽고 그걸 판매로 연결하는 사람이 되고 싶은 대학생이에요!
+
+Q. 경영학을 선택한 이유는요?
+A. 고등학교 때 좋아하던 화장품 브랜드가 SNS 마케팅으로 빠르게 성장하는 걸 보고, 좋은 제품도 어떻게 알리느냐에 따라 결과가 달라진다는 게 신기했어요.
+A. 그 과정을 체계적으로 배우고 싶어서 경영학을 선택했고, 지금은 마케팅과 유통 과목을 중심으로 공부하고 있어요.
+
+Q. 가장 자신 있는 강점은요?
+A. 실행력이에요. 궁금한 게 생기면 일단 직접 해보는 편이에요.
+A. 뷰티 마케팅이 궁금해서 인스타그램 계정을 직접 만들었고, 브랜드 일이 궁금해서 서포터즈에 지원했어요. 그렇게 쌓은 경험이 지금 대학대전 MD 역할에 그대로 도움이 되고 있어요.
+
+Q. 뷰티 인스타그램은 어떻게 운영했나요?
+A. 정해진 요일에 꾸준히 올리는 걸 원칙으로 했어요. 제품 리뷰, 메이크업 루틴, 성분 정리 카드뉴스 세 가지 형식을 번갈아 올렸어요.
+A. 게시물마다 인사이트를 확인해서 저장 수가 높은 형식을 늘리는 식으로 방향을 조정했어요. 데이터를 보는 습관이 이때 처음 생겼어요 📊
+
+Q. 서포터즈 활동에서 무엇을 배웠나요?
+A. 메이크 프렘즈, 플리다 프렌즈, 퓨어스까지 세 브랜드의 서포터즈로 활동했어요.
+A. 브랜드마다 원하는 톤과 메시지가 달라서, 같은 제품 리뷰도 브랜드 가이드에 맞게 다르게 써야 한다는 걸 배웠어요. 내가 하고 싶은 말보다 브랜드가 전하고 싶은 말을 먼저 생각하는 연습이 됐어요.
+
+Q. 동아리 운영진으로 어떤 일을 했나요?
+A. 봉사 동아리 쿠사에서 3학년 1학기 동안 운영진으로 활동하며 봉사 일정 관리와 신입 부원 모집 홍보를 맡았어요.
+A. 인스타그램 운영 경험을 살려 모집 홍보물을 만들었고, 부원들이 일정을 쉽게 확인하도록 공유 시트로 정리했어요.
+
+Q. 대학대전에서는 어떤 역할인가요?
+A. 팀의 MD를 맡고 있어요. 어떤 상품을 팔지 고르고, 구성과 가격, 혜택을 기획하는 역할이에요.
+A. 대학생 타깃에 맞는 상품을 찾기 위해 후보 상품을 비교하고, 판매 데이터를 대시보드로 정리해서 팀이 빠르게 판단할 수 있게 돕고 있어요.
+
+Q. 팀에서 의견이 갈리면 어떻게 하나요?
+A. 먼저 각자 그렇게 생각하는 이유를 끝까지 들어요. 목표는 같은데 방법만 다른 경우가 대부분이더라고요.
+A. 그다음엔 감이 아니라 근거로 정하자고 제안해요. 대학대전에서도 상품 후보를 두고 의견이 갈렸을 때 기준표를 만들어 점수를 매기는 방식으로 합의했어요.
+
+Q. 스스로 생각하는 약점은요?
+A. 하고 싶은 게 많아서 일을 한꺼번에 벌리는 편이에요 😅
+A. 그래서 요즘은 할 일을 이번 주에 꼭 끝낼 것과 나중에 할 것으로 나눠 관리하고, 우선순위를 정한 다음에 새 일을 시작하려고 노력하고 있어요.
+
+Q. 앞으로의 진로 계획이 궁금해요
+A. 유통·커머스 분야의 MD가 되는 게 목표예요.
+A. 대학대전에서 상품 기획부터 판매까지 경험하면서, 소비자 반응을 바로 확인할 수 있는 라이브커머스에 더 관심이 생겼어요. 남은 학기에는 데이터 분석 역량을 더 키우려고 해요.
+
+## 💬 연락처
+### 기본 정보
+- **이름** 윤지은
+- **소속** 가천대학교 경영학전공 3학년
+- **관심 분야** 유통 · 커머스 MD, 뷰티 마케팅
+
+### 연락하기
+- **이메일** [yunjieun9191@naver.com](mailto:yunjieun9191@naver.com)
+- **학교 이메일** [jieun9191@gachon.ac.kr](mailto:jieun9191@gachon.ac.kr)
+- **답장** 보통 하루 안에 답장드려요
+
+## 🎓 학력
+- **가천대학교 경영학전공** 2024년 입학 · 3학년 재학 중
+- **장덕고등학교** 2021년 입학 · 2024년 졸업
+
+### 주요 수강 과목
+`마케팅원론` `소비자행동론` `유통관리` `경영통계` `회계원리` `경영정보시스템`
+
+## 💼 경력
+### 뷰티 · 마케팅
+- **뷰티 인스타그램 운영** 제품 리뷰, 메이크업 루틴, 성분 카드뉴스를 직접 기획·촬영·편집하고 인사이트로 반응 분석
+- **메이크 프렘즈 2기** 브랜드 서포터즈 · 신제품 체험 리뷰와 SNS 홍보 콘텐츠 제작
+- **플리다 프렌즈 2기** 브랜드 서포터즈 · 브랜드 가이드에 맞춘 제품 리뷰 콘텐츠 제작
+- **퓨어스 15기** 브랜드 서포터즈 · 제품 체험 후기 작성과 브랜드 캠페인 참여
+
+### 봉사 동아리
+- **쿠사** 정기 봉사 활동 · 3학년 1학기 운영진으로 봉사 일정 관리와 신입 부원 모집 홍보 담당
+- **피네이드** 정기 봉사 활동 참여
+
+## 🗂️ 프로젝트
+### P프로젝트 · 진행 중
+- **롯데홈쇼핑 모바일 라이브 대학대전** 대학 수업 연계 라이브커머스 경진대회
+- 팀별로 판매할 상품을 발굴하고, 방송을 기획해 모바일 생방송으로 직접 판매하며 실제 매출로 경쟁하는 프로젝트예요.
+
+### 내가 맡은 일
+- **MD** 판매 상품 선정과 구성, 가격과 혜택 기획
+- **방송 기획** 타깃 고객 분석과 방송 콘셉트 설정
+- **성과 관리** 판매 데이터를 정리한 대시보드 제작
+
+### 진행 과정
+- **1단계 · 상품 발굴** 후보 상품을 비교하고 기준표로 최종 상품 선정
+- **2단계 · 방송 기획** 타깃 설정, 방송 콘셉트와 구성안 작성
+- **3단계 · 리허설** 진행 흐름 점검과 상품 소개 멘트 다듬기
+- **4단계 · 라이브 판매** 모바일 생방송 진행, 실시간 반응 확인
+- **5단계 · 성과 분석** 대시보드로 매출과 반응을 정리하고 회고
+
+### 그 밖의 프로젝트
+- **쿠사 신입 부원 모집 홍보** 인스타그램 홍보물 기획 및 제작
+- **뷰티 성분 카드뉴스 시리즈** 어려운 화장품 성분을 쉽게 풀어 정리한 콘텐츠
+
+## 🛠️ 스킬
+### 마케팅
+`마케팅 기획` `SNS 콘텐츠 제작` `인스타그램 운영` `브랜드 커뮤니케이션`
+
+### MD · 커머스
+`상품 MD` `라이브커머스 기획` `타깃 고객 분석` `가격·혜택 기획`
+
+### 데이터 · 협업
+`대시보드 제작` `데이터 정리` `팀 운영` `커뮤니케이션`
+
+### 사용하는 도구
+`엑셀` `구글 스프레드시트` `캔바` `인스타그램 인사이트` `파워포인트`
+
+## 💡 강점
+- **실행력** 궁금하면 직접 해보는 사람이에요. 인스타그램 운영과 서포터즈 지원이 그 시작이었어요.
+- **소비자 관점** 콘텐츠를 만들고 반응을 지켜보며 사는 사람의 입장에서 생각하는 습관을 길렀어요.
+- **데이터 기반 판단** 인사이트 분석부터 대시보드 제작까지, 감보다 근거로 판단하려고 해요.
+- **책임감** 운영진으로서 맡은 일정과 홍보를 끝까지 챙기며 동아리를 함께 이끌었어요.
+
+## 📅 타임라인
+- **2021** 장덕고등학교 입학
+- **2024** 장덕고등학교 졸업 · 가천대학교 경영학전공 입학
+- **2024 ~** 뷰티 인스타그램 운영 · 브랜드 서포터즈 활동
+- **2026 상반기** 봉사 동아리 쿠사 운영진 (3학년 1학기)
+- **2026 하반기** 롯데홈쇼핑 모바일 라이브 대학대전 참가 · P프로젝트 진행
+
+## 🎯 목표
+### 지금
+- **P프로젝트 완성** 대학대전에서 좋은 상품을 기획하고, 팀과 함께 성공적인 라이브 방송 만들기
+
+### 졸업 전
+- **데이터 역량 키우기** 엑셀과 데이터 분석을 더 깊이 공부해 근거 있는 기획하기
+- **현장 경험 쌓기** 유통·커머스 기업 인턴십 도전하기
+
+### 그 이후
+- **커머스 MD** 소비자가 정말 원하는 상품을 찾아 판매로 연결하는 MD 되기
+</script>
+
+<div class="phone">
+  <div class="screen" id="screen">
+    <div class="island" aria-hidden="true"></div>
+    <div class="status" aria-hidden="true">
+      <span id="clock">9:41</span>
+      <span class="status-icons">
+        <svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+        <svg viewBox="0 0 26 12"><rect x="0.5" y="0.5" width="22" height="11" rx="3" fill="none" stroke="currentColor"/><rect x="2" y="2" width="17" height="8" rx="2"/><rect x="24" y="4" width="2" height="4" rx="1"/></svg>
+      </span>
+    </div>
+
+    <main class="home" id="home">
+      <section class="widget">
+        <!-- 사진을 넣으려면: <div class="avatar"><img src="profile.jpg" alt="프로필 사진"></div> -->
+        <div class="avatar" id="avatar"></div>
+        <div><h1 id="name"></h1><p id="tagline"></p></div>
+      </section>
+      <nav class="grid" id="grid" aria-label="앱 목록"></nav>
+      <nav class="dock" id="dock" aria-label="자주 쓰는 앱"></nav>
+    </main>
+
+    <section class="page" id="settings" aria-label="설정">
+      <div class="page-head"><button class="back">‹ 홈</button><h2>설정</h2></div>
+      <div class="group">
+        <div class="row toggle-row">
+          <b>다크 모드</b>
+          <button class="switch" id="darkSwitch" role="switch" aria-checked="false" aria-label="다크 모드"></button>
+        </div>
+      </div>
+    </section>
+
+    <button class="home-bar" aria-label="홈으로"></button>
+  </div>
+</div>
+
+<p class="hint">아이콘을 눌러 둘러보세요</p>
+
+<script>
+  // ---------- 마크다운 읽기 ----------
+  const esc = t => t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const inline = t => esc(t)
+    .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
+    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+
+  const lines = document.getElementById('content').textContent.split('\n');
+  let name = '', tagline = '', sections = [], cur = null;
+  for (const raw of lines) {
+    const l = raw.trim();
+    if (l.startsWith('## ')) {
+      const [icon, ...rest] = l.slice(3).split(/\s+/);
+      cur = { icon, title: rest.join(' '), lines: [], greet: [], qa: [] }; sections.push(cur);
+    } else if (l.startsWith('# ')) name = l.slice(2);
+    else if (!cur) { if (l && !tagline) tagline = l; }
+    else if (l.startsWith('Q. ')) cur.qa.push({ q: l.slice(3), a: [] });
+    else if (l.startsWith('A. ') && cur.qa.length) cur.qa[cur.qa.length - 1].a.push(l.slice(3));
+    else if (l.startsWith('> ')) { cur.greet.push(l.slice(2)); cur.lines.push(l); }
+    else cur.lines.push(l);
+  }
+
+  // 일반 앱 화면
+  function renderBody(ls) {
+    let html = '', open = false;
+    const close = () => { if (open) { html += '</div>'; open = false; } };
+    for (const l of ls) {
+      if (!l) { close(); continue; }
+      if (l.startsWith('### ')) { close(); html += '<p class="group-title">' + esc(l.slice(4)) + '</p>'; }
+      else if (l.startsWith('> ')) { close(); html += '<p class="bubble">' + inline(l.slice(2)) + '</p>'; }
+      else if (l.startsWith('- ')) {
+        if (!open) { html += '<div class="group">'; open = true; }
+        const m = l.slice(2).match(/^\*\*(.+?)\*\*\s*(.*)$/);
+        html += m
+          ? '<div class="row"><b>' + esc(m[1]) + '</b>' + (m[2] ? '<small>' + inline(m[2]) + '</small>' : '') + '</div>'
+          : '<div class="row">' + inline(l.slice(2)) + '</div>';
+      }
+      else if (/^(`[^`]+`\s*)+$/.test(l)) {
+        close();
+        html += '<div class="group"><div class="chips">' +
+          l.match(/`[^`]+`/g).map(c => '<span class="chip">' + esc(c.slice(1, -1)) + '</span>').join('') +
+          '</div></div>';
+      }
+      else { close(); html += '<p class="bubble me">' + inline(l) + '</p>'; }
+    }
+    close();
+    return html;
+  }
+
+  // 대화형 앱 화면
+  function renderChat(s) {
+    return '<div class="chat-head"><button class="back">‹</button><div class="mini-av">' + esc(name.charAt(0)) +
+      '</div><div><b>' + esc(name) + '</b><small>보통 바로 답장해요</small></div></div>' +
+      '<div class="msgs"><p class="day">오늘</p>' +
+      s.greet.map(g => '<p class="bubble">' + inline(g) + '</p>').join('') + '</div>' +
+      '<div class="qbar"><p>궁금한 질문을 눌러보세요 👇</p><div class="qlist">' +
+      s.qa.map((x, i) => '<button class="qchip" data-q="' + i + '">' + esc(x.q) + '</button>').join('') +
+      '</div></div>';
+  }
+
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  async function ask(page, s, i, btn) {
+    const msgs = page.querySelector('.msgs');
+    const chips = page.querySelectorAll('.qchip');
+    chips.forEach(c => c.disabled = true);
+    const add = (cls, html) => {
+      const p = document.createElement('p'); p.className = cls; p.innerHTML = html;
+      msgs.appendChild(p); msgs.scrollTop = msgs.scrollHeight; return p;
+    };
+    add('bubble me', esc(s.qa[i].q));
+    for (const a of s.qa[i].a) {
+      await wait(reduce ? 0 : 350);
+      const t = add('bubble typing', '<i></i><i></i><i></i>');
+      await wait(reduce ? 0 : Math.min(1400, 450 + a.length * 12));
+      t.remove();
+      add('bubble', inline(a));
+    }
+    btn.classList.add('used');
+    chips.forEach(c => c.disabled = false);
+  }
+
+  document.getElementById('name').textContent = name;
+  document.getElementById('tagline').textContent = tagline;
+  document.getElementById('avatar').textContent = name.charAt(0);
+  document.title = name + ' | 자기소개';
+
+  const screen = document.getElementById('screen');
+  const settings = document.getElementById('settings');
+  const appBtn = (id, s, i) =>
+    '<button class="app" data-open="' + id + '" aria-label="' + esc(s.title) + '"><div class="icon g' + (i % 7 + 1) + '">' +
+    s.icon + '</div><span>' + esc(s.title) + '</span></button>';
+  let grid = '', dock = '';
+  const dockNames = ['소개', '연락처', '프로젝트'];
+  sections.forEach((s, i) => {
+    const id = 'app' + i;
+    const page = document.createElement('section');
+    page.id = id; page.setAttribute('aria-label', s.title);
+    if (s.qa.length) {
+      page.className = 'page chat';
+      page.innerHTML = renderChat(s);
+      page.addEventListener('click', e => {
+        const b = e.target.closest('.qchip'); if (b) ask(page, s, +b.dataset.q, b);
+      });
+    } else {
+      page.className = 'page';
+      page.innerHTML = '<div class="page-head"><button class="back">‹ 홈</button><h2>' + esc(s.title) + '</h2></div>' + renderBody(s.lines);
+    }
+    screen.insertBefore(page, settings);
+    grid += appBtn(id, s, i);
+    if (dockNames.includes(s.title)) dock += appBtn(id, s, i);
+  });
+  grid += '<button class="app" data-open="settings"><div class="icon g8">🌙</div><span>설정</span></button>';
+  document.getElementById('grid').innerHTML = grid;
+  document.getElementById('dock').innerHTML = dock;
+
+  // ---------- 시계 ----------
+  const clock = document.getElementById('clock');
+  function tick() { const d = new Date(); clock.textContent = d.getHours() + ':' + String(d.getMinutes()).padStart(2, '0'); }
+  tick(); setInterval(tick, 10000);
+
+  // ---------- 앱 열기 / 닫기 ----------
+  let current = null;
+  function openPage(id) {
+    closePage();
+    current = document.getElementById(id);
+    current.classList.add('open');
+    if (!current.classList.contains('chat')) current.scrollTop = 0;
+    current.querySelector('.back').focus({ preventScroll: true });
+  }
+  function closePage() { if (current) current.classList.remove('open'); current = null; }
+  document.addEventListener('click', e => {
+    const o = e.target.closest('[data-open]'); if (o) return openPage(o.dataset.open);
+    if (e.target.closest('.back, .home-bar')) closePage();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closePage(); });
+
+  // ---------- 다크 모드 ----------
+  const root = document.documentElement, sw = document.getElementById('darkSwitch');
+  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  const sync = () => sw.setAttribute('aria-checked', String(isDark()));
+  try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}
+  sync();
+  sw.addEventListener('click', () => {
+    const next = isDark() ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    sync();
+  });
+</script>
+</body>
+</html>
